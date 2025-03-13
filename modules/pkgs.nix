@@ -3,6 +3,7 @@
 
 	environment.systemPackages = [
 	pkgs.brave
+	pkgs.librewolf
 	pkgs.htop
 	pkgs.fastfetch
 	pkgs.docker
