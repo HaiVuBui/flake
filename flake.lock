@@ -105,15 +105,15 @@
         "nix-index-database": "nix-index-database"
       },
       "locked": {
-        "lastModified": 1737853582,
-        "narHash": "sha256-igq5vGdXKmpmlf2rzgQ0XheeIb8oJmKL1VTSgmagtno=",
-        "owner": "richen604",
+        "lastModified": 1741886895,
+        "narHash": "sha256-NHRzEtLPRztX4OjSTZyIbNC1bWAp1nNc2/BH/sSgxNM=",
+        "owner": "haivubui",
         "repo": "hydenix",
-        "rev": "acf1a1f4a9cd1f2f433503b3d317df0cf1fc8bc1",
+        "rev": "72e7027fa2aab53f1c759dea06e8fee07aa194df",
         "type": "github"
       },
       "original": {
-        "owner": "richen604",
+        "owner": "haivubui",
         "repo": "hydenix",
         "type": "github"
       }
