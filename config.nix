@@ -40,7 +40,7 @@
   */
   # List of nix modules to import in ./hosts/nixos/default.nix
   nixModules = [
-    (toString ./modules/pkgs.nix)
+    #(toString ./modules/pkgs.nix)
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
     # ({ userConfig, pkgs, ... }: {
