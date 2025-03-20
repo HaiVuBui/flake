@@ -42,6 +42,8 @@
   nixModules = [
     (toString ./modules/nvidia.nix)
     (toString ./modules/pkgs.nix)
+    (toString ./modules/docker.nix)
+    (toString ./modules/nopass.nix)
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
     # ({ userConfig, pkgs, ... }: {
@@ -69,15 +71,15 @@
     # list of themes to choose from
     themes = [
       # -- Default themes
-      # "Catppuccin Latte"
+      "Catppuccin Latte"
       "Catppuccin Mocha"
       # "Decay Green"
       # "Edge Runner"
-      # "Frosted Glass"
-      # "Graphite Mono"
-      # "Gruvbox Retro"
+       "Frosted Glass"
+       "Graphite Mono"
+       "Gruvbox Retro"
       # "Material Sakura"
-      # "Nordic Blue"
+       "Nordic Blue"
       # "Rose Pine"
       # "Synth Wave"
       # "Tokyo Night"

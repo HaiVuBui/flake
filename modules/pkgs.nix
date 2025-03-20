@@ -6,7 +6,6 @@
 	pkgs.librewolf
 	pkgs.htop
 	pkgs.fastfetch
-	pkgs.docker
 	pkgs.gcc13
 	pkgs.yazi
 	pkgs.youtube-music
@@ -15,11 +14,12 @@
 	pkgs.cmatrix
 	pkgs.tmux
 	pkgs.jetbrains.pycharm-professional
-		#pkgs.cudaPackages_11_8.cudatoolkit
-	#pkgs.bleachbit
-	#pkgs.python312 
-	#pkgs.python312Packages.pytorch 
+	pkgs.jetbrains.clion
+	#pkgs.cudaPackages_11_8.cudatoolkit
+	pkgs.bleachbit
 	pkgs.cudatoolkit
+	pkgs.obsidian
+	pkgs.zettlr
 
 	];
 
@@ -27,5 +27,8 @@
 	fonts.packages = with pkgs; [
 	nerd-fonts.fira-code
 	nerd-fonts.symbols-only
-];
+	];
+
+	services.power-profiles-daemon.enable = true;
+
 }
