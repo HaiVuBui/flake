@@ -1,19 +1,20 @@
 {
-  description = "template for hydenix";
+  description = "Nix & home-manager configuration for HyDE, an Arch Linux based Hyprland desktop";
 
   inputs = {
-    # User's nixpkgs - for user packages
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Hydenix's nixpkgs
+    hydenix-nixpkgs.url = "github:nixos/nixpkgs/ecd26a469ac56357fd333946a99086e992452b6a";
 
-    # Hydenix and its nixpkgs - kept separate to avoid conflicts
-    hydenix = {
-      # Available inputs:
-      # Main: github:richen604/hydenix
-      # Dev: github:richen604/hydenix/dev
-      # Commit: github:richen604/hydenix/<commit-hash>
-      # Version: github:richen604/hydenix/v1.0.0
-      url = "github:haivubui/hydenix";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "hydenix-nixpkgs";
     };
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      inputs.nixpkgs.follows = "hydenix-nixpkgs";
+    };
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "hydenix-nixpkgs";
   };
 
   outputs =
@@ -21,32 +22,83 @@
     let
       system = "x86_64-linux";
 
-      # User's pkgs instance
-      pkgs = import inputs.nixpkgs {
+      # Hydenix's pkgs instance
+      pkgs = import inputs.hydenix-nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
 
-      hydenixConfig = inputs.hydenix.lib.mkConfig {
+      mkConfig = import ./lib/mkConfig.nix {
+        inherit
+          inputs
+          pkgs
+          system
+          ;
+      };
+
+      defaultConfig = mkConfig {
         userConfig = import ./config.nix;
-        extraInputs = inputs;
-        # Pass user's pkgs to be used alongside hydenix's pkgs (eg. userPkgs.kitty)
-        extraPkgs = pkgs;
+        extraInputs = { };
       };
     in
     {
-      nixosConfigurations.nixos = hydenixConfig.nixosConfiguration;
-      nixosConfigurations.${hydenixConfig.userConfig.host} = hydenixConfig.nixosConfiguration;
+      # Main config builder
+      lib = {
+        inherit mkConfig;
+      };
+
+      templates = {
+        default = {
+          path = ./template;
+          description = "Hydenix template";
+          welcomeText = ''
+            ```
+             _    _           _            _
+            | |  | |         | |          (_)
+            | |__| |_   _  __| | ___ _ __  ___  __
+            |  __  | | | |/ _` |/ _ \ '_ \| \ \/ /
+            | |  | | |_| | (_| |  __/ | | | |>  <
+            |_|  |_|\__, |\__,_|\___|_| |_|_/_/\_\
+                    __/ |
+                    |___/       ❄️ Powered by Nix ❄️
+            ```
+            1. edit `config.nix` with your preferences
+            2. run `sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix`
+            3. `git init && git add .` (flakes have to be managed via git)
+            4. run any of the packages in your new `flake.nix`
+              - for rebuild, use `sudo nixos-rebuild switch --flake .`
+              - for vm, use `nix run .`
+          '';
+        };
+      };
+
+      nixosConfigurations.nixos = defaultConfig.nixosConfiguration;
+      nixosConfigurations.${defaultConfig.userConfig.host} = defaultConfig.nixosConfiguration;
 
       packages.${system} = {
-        # Packages below load your config in ./config.nix
+        # generate-config script
+        gen-config = pkgs.writeShellScriptBin "gen-config" (builtins.readFile ./lib/gen-config.sh);
 
-        # defaults to nix-vm - nix run .
-        default = hydenixConfig.nix-vm.config.system.build.vm;
+        # defaults to nix-vm
+        default = defaultConfig.nix-vm.config.system.build.vm;
 
-        # EXPERIMENTAL VM BUILDERS - nix run .#arch-vm / nix run .#fedora-vm
-        arch-vm = hydenixConfig.arch-vm;
-        fedora-vm = hydenixConfig.fedora-vm;
+        # NixOS activation packages
+        hydenix = defaultConfig.nixosConfiguration.config.system.build.toplevel;
+
+        # Home activation packages
+        hm = defaultConfig.homeConfigurations.${defaultConfig.userConfig.username}.activationPackage;
+        hm-generic =
+          defaultConfig.homeConfigurations."${defaultConfig.userConfig.username}-generic".activationPackage;
+
+        # EXPERIMENTAL VM BUILDERS
+        arch-vm = defaultConfig.arch-vm;
+        fedora-vm = defaultConfig.fedora-vm;
+
+        # Add the ISO builder
+        iso = defaultConfig.installer.iso;
+        burn-iso = defaultConfig.installer.burn-iso;
       };
+
+      devShells.${system}.default = import ./lib/dev-shell.nix { inherit pkgs; };
     };
 }
