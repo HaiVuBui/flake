@@ -19,8 +19,11 @@
 	pkgs.bleachbit
 	pkgs.cudatoolkit
 	pkgs.obsidian
-	pkgs.zettlr
-
+	pkgs.tldr
+	pkgs.openvpn
+	pkgs.tor-browser
+	pkgs.nodejs
+	pkgs.code-cursor
 	];
 
 
@@ -30,5 +33,10 @@
 	];
 
 	services.power-profiles-daemon.enable = true;
+
+	#services.tor = {
+	#enable = true;
+	#client.enable = true;
+	#};
 
 }

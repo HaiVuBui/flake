@@ -44,6 +44,8 @@
     (toString ./modules/pkgs.nix)
     (toString ./modules/docker.nix)
     (toString ./modules/nopass.nix)
+    (toString ./modules/vscode.nix)
+
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
     # ({ userConfig, pkgs, ... }: {
