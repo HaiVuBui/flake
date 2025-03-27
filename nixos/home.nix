@@ -13,9 +13,9 @@
     enable = userConfig.hyde.enable or true;
     themes =
       userConfig.hyde.themes or [
-        "Catppuccin Mocha"
+       "Gruvbox Retro"
       ];
-    activeTheme = userConfig.hyde.activeTheme or "Catppuccin Mocha";
+    activeTheme = userConfig.hyde.activeTheme or "Gruvbox Retro";
   };
 
   # Don't change this

@@ -91,8 +91,8 @@
           defaultConfig.homeConfigurations."${defaultConfig.userConfig.username}-generic".activationPackage;
 
         # EXPERIMENTAL VM BUILDERS
-        arch-vm = defaultConfig.arch-vm;
-        fedora-vm = defaultConfig.fedora-vm;
+        #arch-vm = defaultConfig.arch-vm;
+        #fedora-vm = defaultConfig.fedora-vm;
 
         # Add the ISO builder
         iso = defaultConfig.installer.iso;

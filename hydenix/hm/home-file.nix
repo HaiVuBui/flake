@@ -78,6 +78,12 @@ lib.mkMerge [
       recursive = true;
       mutable = true;
     };
+    ".config/nvim" = {
+      source = "${hyde}/share/hyde/hyprdots-modified/Configs/.config/nvim";
+      force = true;
+      recursive = true;
+      mutable = true;
+    };
     ".config/kitty" = {
       source = "${hyde}/share/hyde/hyprdots-modified/Configs/.config/kitty";
       force = true;

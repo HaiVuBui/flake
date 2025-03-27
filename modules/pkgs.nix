@@ -24,7 +24,6 @@
 	pkgs.tor-browser
 	pkgs.nodejs
 	pkgs.code-cursor
-	pkgs.hyprlock
 	];
 
 
