@@ -42,11 +42,11 @@
         # Packages below load your config in ./config.nix
 
         # defaults to nix-vm - nix run .
-        default = hydenixConfig.nix-vm.config.system.build.vm;
+        #default = hydenixConfig.nix-vm.config.system.build.vm;
 
         # EXPERIMENTAL VM BUILDERS - nix run .#arch-vm / nix run .#fedora-vm
-        arch-vm = hydenixConfig.arch-vm;
-        fedora-vm = hydenixConfig.fedora-vm;
+        #arch-vm = hydenixConfig.arch-vm;
+        #fedora-vm = hydenixConfig.fedora-vm;
       };
     };
 }

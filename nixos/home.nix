@@ -6,7 +6,7 @@
 {
 
   imports = [
-    ../../hydenix
+    ../hydenix
   ];
 
   hydenix = {

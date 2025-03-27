@@ -4,10 +4,10 @@
   ...
 }:
 let
-  sddm-candy = pkgs.callPackage ../../hydenix/sources/sddm-candy.nix { };
-  sddm-corners = pkgs.callPackage ../../hydenix/sources/sddm-corners.nix { };
+  sddm-candy = pkgs.callPackage ../hydenix/sources/sddm-candy.nix { };
+  sddm-corners = pkgs.callPackage ../hydenix/sources/sddm-corners.nix { };
   Bibata-Modern-Ice =
-    (import ../../hydenix/sources/themes/utils/arcStore.nix { inherit pkgs; })
+    (import ../hydenix/sources/themes/utils/arcStore.nix { inherit pkgs; })
     .cursor."Bibata-Modern-Ice";
 in
 {

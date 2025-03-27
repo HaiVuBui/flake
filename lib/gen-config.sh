@@ -56,7 +56,7 @@ cat <<EOF >"$CONFIG_FILE"
   # hardware config - sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
   hardwareConfig = (toString ./hardware-configuration.nix);
 
-  # List of drivers to install in ./hosts/nixos/drivers.nix
+  # List of drivers to install in ./nixos/drivers.nix
   drivers = [
     "amdgpu"
     "intel"
@@ -80,7 +80,7 @@ cat <<EOF >"$CONFIG_FILE"
         environment.systemPackages = [ pkgs.git ];  #? This gets merged with hydenix
       }
   */
-  # List of nix modules to import in ./hosts/nixos/default.nix
+  # List of nix modules to import in ./nixos/default.nix
   nixModules = [
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
