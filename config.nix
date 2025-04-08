@@ -45,6 +45,7 @@
     (toString ./modules/docker.nix)
     (toString ./modules/nopass.nix)
     (toString ./modules/vscode.nix)
+    #(toString ./modules/power.nix)
 
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig

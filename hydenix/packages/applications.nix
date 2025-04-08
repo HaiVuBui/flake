@@ -12,5 +12,14 @@
     discord # chat client
     webcord # discord client
     vesktop # discord client
+    htop 
+    yazi
+    tty-clock
+    cmatrix
+    tmux
+    code-cursor
+    obsidian
+    jetbrains.pycharm-professional
+    jetbrains.clion
   ];
 }
