@@ -21,5 +21,6 @@
     obsidian
     jetbrains.pycharm-professional
     jetbrains.clion
+    sublime4
   ];
 }
