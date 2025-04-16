@@ -8,6 +8,7 @@
     basedpyright
     zlib
     clang-tools
+    python310
   ];
 
   environment.variables = {

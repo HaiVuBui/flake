@@ -88,6 +88,11 @@
       "keyColor": "magenta"
     },
     {
+      "type": "disk",
+      "key": "   Storage",
+      "keyColor": "magenta"
+    },
+    {
       "type": "memory",
       "key": "    Memory",
       "keyColor": "magenta"

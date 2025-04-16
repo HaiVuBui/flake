@@ -39,6 +39,10 @@
       source $HOME/.local/state/nix/profiles/home-manager/home-path/share/hyde/hyde-cli/shell-completions/Hyde.zsh
 
       export PATH=$HOME/.local/bin:$PATH
+
+      alias poe='poetry'
+      alias por='poetry run'
+      alias sub='sublime'
     '';
     initExtraFirst = ''
       #Display Pokemonks

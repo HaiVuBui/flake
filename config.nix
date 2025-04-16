@@ -47,7 +47,7 @@
     (toString ./modules/vscode.nix)
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
-    #(toString ./modules/power.nix)
+    (toString ./modules/server_power.nix)
 
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
@@ -78,44 +78,44 @@
       # -- Default themes
       "Catppuccin Latte"
       "Catppuccin Mocha"
-      # "Decay Green"
-      # "Edge Runner"
+       "Decay Green"
+       "Edge Runner"
        "Frosted Glass"
        "Graphite Mono"
        "Gruvbox Retro"
-      # "Material Sakura"
+       "Material Sakura"
        "Nordic Blue"
-      # "Rose Pine"
-      # "Synth Wave"
-      # "Tokyo Night"
+       "Rose Pine"
+       "Synth Wave"
+       "Tokyo Night"
 
       # -- Themes from hyde-gallery
       # "Abyssal-Wave"
       # "AbyssGreen"
       # "Bad Blood"
-      # "Cat Latte"
+       "Cat Latte"
       # "Crimson Blade"
       # "Dracula"
       # "Edge Runner"
-      # "Green Lush"
-      # "Greenify"
-      # "Hack the Box"
+       "Green Lush"
+       "Greenify"
+       "Hack the Box"
       # "Ice Age"
-      # "Mac OS"
-      # "Monokai"
-      # "Monterey Frost"
+       "Mac OS"
+       "Monokai"
+       "Monterey Frost"
       # "One Dark"
-      # "Oxo Carbon"
+       "Oxo Carbon"
       # "Paranoid Sweet"
-      # "Pixel Dream"
+       "Pixel Dream"
       # "Rain Dark"
-      # "Red Stone"
+       "Red Stone"
       # "Rose Pine"
       # "Scarlet Night"
       # "Sci-fi"
       # "Solarized Dark"
       # "Vanta Black"
-      # "Windows 11"
+       "Windows 11"
     ];
 
     # Exactly the same as hyde.conf
