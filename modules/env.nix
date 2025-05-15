@@ -9,6 +9,10 @@
     zlib
     clang-tools
     python310
+    cabal-install
+    ghc
+    haskell-language-server
+    ormolu
   ];
 
   environment.variables = {
