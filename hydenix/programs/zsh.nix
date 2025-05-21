@@ -43,6 +43,7 @@
       alias poe='poetry'
       alias por='poetry run'
       alias sub='sublime'
+      alias n='nvim'
     '';
     initExtraFirst = ''
       #Display Pokemonks
