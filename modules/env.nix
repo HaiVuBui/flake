@@ -2,17 +2,31 @@
 
 {
   environment.systemPackages = with pkgs; [
-    stdenv.cc
+    # Cudas
     cudatoolkit
+    # Java/JS
     nodejs
+    #Python
     basedpyright
-    zlib
+
+    # C/Cpp
+    stdenv.cc
     clang-tools
+    zlib
     python310
+
+    # Haskell
     cabal-install
-    ghc
-    haskell-language-server
     ormolu
+    haskell-language-server
+    ghc
+
+    #Nvim
+    ripgrep
+    rsync
+    # latex
+    texlab
+    texliveFull
   ];
 
   environment.variables = {
