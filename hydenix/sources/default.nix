@@ -13,7 +13,7 @@ let
     spicetify-sleek = import ./spicetify-sleek.nix { inherit pkgs lib; };
     hyde-fonts = import ./hyde-fonts.nix { inherit pkgs; };
     pokemon-colorscripts = import ./pokemon-colorscripts.nix { inherit pkgs lib; };
-    vscode-wallbash = import ./vscode-wallbash.nix { inherit pkgs; };
+    # vscode-wallbash = import ./vscode-wallbash.nix { inherit pkgs; };
     hyde-gallery = import ./hyde-gallery.nix { inherit pkgs lib; };
     sddm-candy = import ./sddm-candy.nix { inherit pkgs; };
     sddm-corners = import ./sddm-corners.nix { inherit pkgs; };

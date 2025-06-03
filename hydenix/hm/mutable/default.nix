@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./vscode-mutable.nix
+    # ./vscode-mutable.nix
     ./mutable.nix
   ];
 }
