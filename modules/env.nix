@@ -4,6 +4,10 @@
   environment.systemPackages = with pkgs; [
     # Cudas
     cudatoolkit
+
+    # nix lsp
+    nixd
+
     # Java/JS
     nodejs
     #Python
@@ -24,6 +28,7 @@
     #Nvim
     ripgrep
     rsync
+
     # latex
     texlab
     texliveFull
