@@ -70,7 +70,7 @@
     };
 
     # active theme, must be in themes list
-    activeTheme = "Catppuccin Mocha";
+    activeTheme = "Catppuccin Latte";
 
     # list of themes to choose from
     themes = [
