@@ -1,5 +1,6 @@
 {
   commonArgs,
+  nixpkgs ? {},
 }:
 let
   inherit (commonArgs)
@@ -16,6 +17,7 @@ inputs.hydenix-nixpkgs.lib.nixosSystem {
   };
   modules = [
     {
+      nixpkgs.config = nixpkgs.config;
       nixpkgs.pkgs = commonArgs.pkgs;
     }
     ./configuration.nix
