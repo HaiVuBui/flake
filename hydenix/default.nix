@@ -62,6 +62,7 @@ in
         enableXdgAutostart = true;
         variables = [ "--all" ];
       };
+      settings = {};
     };
 
     dconf = {
