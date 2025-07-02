@@ -17,10 +17,7 @@ rec {
     userPkgs = extraPkgs;
   };
 
-  nixosConfiguration = import ../nixos {
-    inherit commonArgs;
-    nixpkgs.config.allowUnfree = true;
-  };
+  nixosConfiguration = import ../nixos { inherit commonArgs; };
 
   # Add ISO configuration
   installer = import ./iso { inherit commonArgs; };
@@ -45,12 +42,6 @@ rec {
         inherit userConfig;
         inherit inputs;
       };
-      nixpkgs.config = {
-        allowUnfree = true;
-        permittedInsecurePackages = [
-          "openssl-1.1.1w"
-        ];
-      };
     };
 
     # Generic home configuration for non-NixOS systems
@@ -66,12 +57,6 @@ rec {
       extraSpecialArgs = {
         inherit userConfig;
         inherit inputs;
-      };
-      nixpkgs.config = {
-        allowUnfree = true;
-        permittedInsecurePackages = [
-          "openssl-1.1.1w"
-        ];
       };
     };
 
