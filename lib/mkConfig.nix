@@ -17,7 +17,10 @@ rec {
     userPkgs = extraPkgs;
   };
 
-  nixosConfiguration = import ../nixos { inherit commonArgs; };
+  nixosConfiguration = import ../nixos {
+    inherit commonArgs;
+    nixpkgs.config.allowUnfree = true;
+  };
 
   # Add ISO configuration
   installer = import ./iso { inherit commonArgs; };
