@@ -21,7 +21,7 @@ inputs.hydenix-nixpkgs.lib.nixosSystem {
     ./configuration.nix
     inputs.home-manager.nixosModules.home-manager
     {
-      home-manager.useGlobalPkgs = true;
+      home-manager.useGlobalPkgs = false;
       home-manager.useUserPackages = true;
       home-manager.users.${userConfig.username} =
         { ... }:
@@ -30,6 +30,12 @@ inputs.hydenix-nixpkgs.lib.nixosSystem {
             ./home.nix
             inputs.nix-index-database.hmModules.nix-index
           ] ++ userConfig.homeModules;
+          nixpkgs.config = {
+            allowUnfree = true;
+            permittedInsecurePackages = [
+              "openssl-1.1.1w"
+            ];
+          };
         };
       home-manager.extraSpecialArgs = {
         inherit userConfig;
