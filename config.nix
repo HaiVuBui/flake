@@ -47,6 +47,7 @@
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
     (toString ./modules/server_power.nix)
+    (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
