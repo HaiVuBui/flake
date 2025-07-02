@@ -25,10 +25,6 @@
       # Hydenix's pkgs instance
       pkgs = import inputs.hydenix-nixpkgs {
         inherit system;
-        config.allowUnfree = true;
-        config.permittedInsecurePackages = [
-          "openssl-1.1.1w"
-        ];
       };
 
       mkConfig = import ./lib/mkConfig.nix {

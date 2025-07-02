@@ -42,6 +42,12 @@ rec {
         inherit userConfig;
         inherit inputs;
       };
+      nixpkgs.config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "openssl-1.1.1w"
+        ];
+      };
     };
 
     # Generic home configuration for non-NixOS systems
@@ -57,6 +63,12 @@ rec {
       extraSpecialArgs = {
         inherit userConfig;
         inherit inputs;
+      };
+      nixpkgs.config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "openssl-1.1.1w"
+        ];
       };
     };
 
