@@ -10,6 +10,7 @@
 
     # Java/JS
     nodejs
+
     #Python
     basedpyright
 

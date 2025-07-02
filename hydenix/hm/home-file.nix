@@ -245,7 +245,7 @@ lib.mkMerge [
 
   # --------------------------------------------------- // Cache files
   {
-    # VSCode Wallbash extension
+    
     ".cache/hyde/landing/Code_Wallbash.vsix" = {
       source = "${hyde}/share/hyde/hyprdots-modified/Source/arcs/Code_Wallbash.vsix";
       force = true;

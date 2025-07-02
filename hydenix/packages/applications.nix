@@ -8,7 +8,7 @@
     kdePackages.dolphin # kde file manager
     ark # kde file archiver
     vim # terminal text editor
-    vscode # ide text editor
+    
     discord # chat client
     webcord # discord client
     vesktop # discord client

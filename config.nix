@@ -44,7 +44,6 @@
     (toString ./modules/pkgs.nix)
     (toString ./modules/docker.nix)
     (toString ./modules/nopass.nix)
-    (toString ./modules/vscode.nix)
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
     (toString ./modules/server_power.nix)
@@ -67,7 +66,6 @@
 
     # wallbash config, sets extensions as active
     wallbash = {
-      vscode = true;
     };
 
     # active theme, must be in themes list

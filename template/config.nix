@@ -58,7 +58,6 @@
 
     # wallbash config, sets extensions as active
     wallbash = {
-      vscode = true;
     };
 
     # active theme, must be in themes list
