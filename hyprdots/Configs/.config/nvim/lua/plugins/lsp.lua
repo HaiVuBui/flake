@@ -1,20 +1,20 @@
 return {
--- {
---   "williamboman/mason.nvim",
---   lazy = false,
---   config = function()
---     require("mason").setup()
---   end,
--- },
--- {
---   "williamboman/mason-lspconfig.nvim",
---   dependencies = { "williamboman/mason.nvim" },
---   config = function()
---     require("mason-lspconfig").setup {
---       ensure_installed = { "basedpyright", "hls", "texlab" },
---     }
---   end,
--- },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("mason").setup()
+  --   end,
+  -- },
+  -- {
+  --   "williamboman/mason-lspconfig.nvim",
+  --   dependencies = { "williamboman/mason.nvim" },
+  --   config = function()
+  --     require("mason-lspconfig").setup {
+  --       ensure_installed = { "basedpyright", "hls", "texlab", "nixd" },
+  --     }
+  --   end,
+  -- },
   {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
@@ -53,6 +53,11 @@ return {
             },
           },
         },
+      }
+
+      -- Nixd
+      lspconfig.nixd.setup {
+        capabilities = capabilities,
       }
 
       -- Keybindings

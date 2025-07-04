@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Cudas
-    cudatoolkit
+    # cudatoolkit
 
     # nix lsp
     nixd
@@ -12,13 +12,13 @@
     nodejs
 
     #Python
+    python310
     basedpyright
 
     # C/Cpp
     stdenv.cc
     clang-tools
     zlib
-    python310
 
     # Haskell
     cabal-install
@@ -38,9 +38,9 @@
   environment.variables = {
     LD_LIBRARY_PATH = pkgs.lib.concatStringsSep ":" [
       "${pkgs.stdenv.cc.cc.lib}/lib"
-      "${pkgs.cudatoolkit}/lib"
+      # "${pkgs.cudatoolkit}/lib"
       "${pkgs.zlib}/lib" 
-      "/run/opengl-driver/lib"
+      # "/run/opengl-driver/lib"
       "$LD_LIBRARY_PATH"
     ];
   };
