@@ -5,6 +5,27 @@ return
       tag = "0.1.8",
       dependencies = { "nvim-lua/plenary.nvim" },
       config = function()
+        -- Setup Telescope to search hidden files with grep
+        require("telescope").setup({
+          defaults = {
+            vimgrep_arguments = {
+              "rg",
+              "--color=never",
+              "--no-heading",
+              "--with-filename",
+              "--line-number",
+              "--column",
+              "--smart-case",
+              "--hidden"  -- Add this to search hidden files
+            },
+          },
+          pickers = {
+            find_files = {
+              hidden = true
+            }
+          }
+        })
+        
         local builtin = require("telescope.builtin")
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
         vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
@@ -33,5 +54,4 @@ return
       end,
     }
 }
-
 
