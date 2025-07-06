@@ -46,7 +46,7 @@
     (toString ./modules/nopass.nix)
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
-    (toString ./modules/power.nix)
+    (toString ./modules/laptop_power.nix)
     # (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)

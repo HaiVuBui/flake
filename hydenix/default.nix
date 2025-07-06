@@ -71,7 +71,7 @@ in
         "org/gnome/desktop/interface" = {
           icon-theme = activeTheme.arcs.icon.name or "Tela-circle-dracula";
           gtk-theme = activeTheme.arcs.gtk.name or "Wallbash-Gtk";
-          color-scheme = "prefer-dark";
+          color-scheme = "prefer-light";
           font-name = activeTheme.arcs.font.name or "Cantarell 10";
           cursor-theme = activeTheme.arcs.cursor.name or "Bibata-Modern-Ice";
           cursor-size = "20";
