@@ -2,7 +2,7 @@
   username = "hai";
   gitUser = "haivubui";
   gitEmail = "buivuhai1105@gmail.com";
-  host = "MinasTirith";
+  host = "MovingCastle";
   /*
     Default password is required for sudo support in systems
     !REMEMBER TO USE passwd TO CHANGE THE PASSWORD!
@@ -40,14 +40,14 @@
   */
   # List of nix modules to import in ./nixos/default.nix
   nixModules = [
-    (toString ./modules/nvidia.nix)
+    # (toString ./modules/nvidia.nix)
     (toString ./modules/pkgs.nix)
     (toString ./modules/docker.nix)
     (toString ./modules/nopass.nix)
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
-    (toString ./modules/server_power.nix)
-    (toString ./modules/vscode.nix)
+    (toString ./modules/power.nix)
+    # (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
