@@ -35,7 +35,8 @@
     texliveFull
   ];
 
-  environment.variables = {
+  environment.variables = 
+  {
     LD_LIBRARY_PATH = pkgs.lib.concatStringsSep ":" [
       "${pkgs.stdenv.cc.cc.lib}/lib"
       # "${pkgs.cudatoolkit}/lib"
@@ -43,5 +44,6 @@
       # "/run/opengl-driver/lib"
       "$LD_LIBRARY_PATH"
     ];
+    XDG_PICTURES_DIR = "$HOME/randomShits/Pictures";
   };
 }
