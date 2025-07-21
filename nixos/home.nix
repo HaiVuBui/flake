@@ -22,6 +22,14 @@
     wofi
   ];
 
+  # imports
+  imports = [
+    # ./hm/mutable
+    # ../hydenix/packages/default.nix
+    (import ../hydenix/programs/default.nix { inherit pkgs userConfig; })
+    # ./sources
+  ];
+
   # ===== Hyprland =====
   wayland.windowManager.hyprland = {
     enable = true;

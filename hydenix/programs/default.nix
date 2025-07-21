@@ -3,7 +3,7 @@
 
   imports = [
     (import ./git.nix { inherit pkgs userConfig; })
-    ./zsh.nix
+    # ./zsh.nix
     ./pixi.nix
     
   ];

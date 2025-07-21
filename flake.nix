@@ -14,6 +14,7 @@
       userConfig = import ./config.nix;
   in
   {
+    nixpkgs.config.allowUnfree = true   ;
     nixosConfigurations.MovingCastle = nixpkgs.lib.nixosSystem {
     inherit
       system

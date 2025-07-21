@@ -25,9 +25,9 @@
     # (toString ./modules/pkgs.nix)
     # (toString ./modules/docker.nix)
     ./modules/nopass.nix
-    # (toString ./modules/env.nix)
+    (toString ./modules/env.nix)
     # (toString ./modules/keyboard.nix)
-    # (toString ./modules/power.nix)
+    (toString ./modules/power.nix)
     # (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)
