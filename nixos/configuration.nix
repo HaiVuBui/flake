@@ -101,6 +101,13 @@
   users.defaultUserShell = pkgs.zsh;
 
   # ===== Nix Configuration =====
+  nixpkgs.config = {
+    allowUnfree = true; 
+    permittedInsecurePackages = [
+    "openssl-1.1.1w"
+    ];
+  }
+  ;
   nix = {
     settings = {
       auto-optimise-store = true;

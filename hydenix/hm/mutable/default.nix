@@ -1,8 +1,0 @@
-{ ... }:
-
-{
-  imports = [
-    
-    ./mutable.nix
-  ];
-}
