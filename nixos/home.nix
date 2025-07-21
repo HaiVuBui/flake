@@ -4,5 +4,8 @@
 }:
 
 {
+  imports = [
+    ../hydenix
+  ];
 
 }
