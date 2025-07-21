@@ -31,7 +31,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.${userConfig.username} = import ./hydenix/default.nix;
+          home-manager.users.${userConfig.username} = import ./nixos/home.nix;
           home-manager.extraSpecialArgs = {
             inherit userConfig;
             inherit inputs;
