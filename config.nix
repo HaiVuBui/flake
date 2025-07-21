@@ -41,12 +41,12 @@
   # List of nix modules to import in ./nixos/default.nix
   nixModules = [
     # (toString ./modules/nvidia.nix)
-    (toString ./modules/pkgs.nix)
-    (toString ./modules/docker.nix)
-    (toString ./modules/nopass.nix)
-    (toString ./modules/env.nix)
-    (toString ./modules/keyboard.nix)
-    (toString ./modules/power.nix)
+    # (toString ./modules/pkgs.nix)
+    # (toString ./modules/docker.nix)
+    # (toString ./modules/nopass.nix)
+    # (toString ./modules/env.nix)
+    # (toString ./modules/keyboard.nix)
+    # (toString ./modules/power.nix)
     # (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)
@@ -60,85 +60,4 @@
     # (toString ./my-module.nix)
   ];
 
-  hyde = rec {
-    sddmTheme = "Candy"; # or "Corners"
-
-    enable = true;
-
-    # wallbash config, sets extensions as active
-    wallbash = {
-    };
-
-    # active theme, must be in themes list
-    activeTheme = "Catppuccin Latte";
-
-    # list of themes to choose from
-    themes = [
-      # -- Default themes
-      "Catppuccin Latte"
-      "Catppuccin Mocha"
-       # "Decay Green"
-       # "Edge Runner"
-       # "Frosted Glass"
-       # "Graphite Mono"
-       "Gruvbox Retro"
-       # "Material Sakura"
-       # "Nordic Blue"
-       # "Rose Pine"
-       # "Synth Wave"
-       # "Tokyo Night"
-
-      # -- Themes from hyde-gallery
-      # "Abyssal-Wave"
-      # "AbyssGreen"
-      # "Bad Blood"
-       "Cat Latte"
-      # "Crimson Blade"
-      # "Dracula"
-      # "Edge Runner"
-       # "Green Lush"
-       # "Greenify"
-       # "Hack the Box"
-      # "Ice Age"
-       # "Mac OS"
-       # "Monokai"
-       # "Monterey Frost"
-      # "One Dark"
-       # "Oxo Carbon"
-      # "Paranoid Sweet"
-       # "Pixel Dream"
-      # "Rain Dark"
-       # "Red Stone"
-      # "Rose Pine"
-      # "Scarlet Night"
-      # "Sci-fi"
-      # "Solarized Dark"
-      # "Vanta Black"
-       # "Windows 11"
-    ];
-
-    # Exactly the same as hyde.conf
-    conf = {
-      hydeTheme = activeTheme;
-      wallFramerate = 144;
-      wallTransDuration = 0.4;
-      wallAddCustomPath = "";
-      enableWallDcol = 2;
-      wallbashCustomCurve = "";
-      skip_wallbash = [ ];
-      themeSelect = 2;
-      rofiStyle = 11;
-      rofiScale = 9;
-      wlogoutStyle = 1;
-    };
-  };
-
-  vm = {
-    # 4 GB minimum
-    memorySize = 4096;
-    # 2 cores minimum
-    cores = 2;
-    # 30GB minimum for one theme - 50GB for multiple themes - more for development and testing
-    diskSize = 20000;
-  };
 }

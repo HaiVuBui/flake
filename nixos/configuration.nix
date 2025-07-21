@@ -3,23 +3,16 @@
   userConfig,
   ...
 }:
-let
-  sddm-candy = pkgs.callPackage ../hydenix/sources/sddm-candy.nix { };
-  sddm-corners = pkgs.callPackage ../hydenix/sources/sddm-corners.nix { };
-  Bibata-Modern-Ice =
-    (import ../hydenix/sources/themes/utils/arcStore.nix { inherit pkgs; })
-    .cursor."Bibata-Modern-Ice";
-in
 {
 
   imports = [
     userConfig.hardwareConfig
-    ./drivers.nix
+    # ./drivers.nix
   ];
 
   # ===== Boot Configuration =====
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages;
 
   # disable if switching to grub
   boot.loader.systemd-boot.enable = true;
@@ -44,18 +37,6 @@ in
     powerOnBoot = true;
   };
 
-  environment.pathsToLink = [
-    "/share/icons"
-    "/share/themes"
-    "/share/fonts"
-    "/share/xdg-desktop-portal"
-    "/share/applications"
-    "/share/mime"
-    "/share/wayland-sessions"
-    "/share/zsh"
-    "/share/bash-completion"
-    "/share/fish"
-  ];
 
   # # # ===== Security =====
   security = {
@@ -83,55 +64,8 @@ in
       mountOnMedia = true;
     };
     openssh.enable = true;
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland = {
-          enable = true;
-          compositor = "kwin";
-        };
-        package = pkgs.libsForQt5.sddm;
-        extraPackages = with pkgs; [
-          sddm-candy
-          sddm-corners
-          libsForQt5.qt5.qtquickcontrols # for sddm theme ui elements
-          libsForQt5.layer-shell-qt # for sddm theme wayland support
-          libsForQt5.qt5.qtquickcontrols2 # for sddm theme ui elements
-          libsForQt5.qt5.qtgraphicaleffects # for sddm theme effects
-          libsForQt5.qtsvg # for sddm theme svg icons
-          libsForQt5.qt5.qtwayland # wayland support for qt5
-
-          Bibata-Modern-Ice
-        ];
-        theme = userConfig.hyde.sddmTheme or "Candy";
-        settings = {
-          General = {
-            GreeterEnvironment = "QT_WAYLAND_SHELL_INTEGRATION=layer-shell";
-          };
-          Theme = {
-            ThemeDir = "/run/current-system/sw/share/sddm/themes";
-            CursorTheme = "Bibata-Modern-Ice";
-          };
-        };
-      };
-      sessionPackages = [ pkgs.hyprland ];
-    };
     upower.enable = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    Bibata-Modern-Ice
-    sddm-candy
-    sddm-corners
-    libsForQt5.qt5.qtquickcontrols # for sddm theme ui elements
-    libsForQt5.layer-shell-qt # for sddm theme wayland support
-    libsForQt5.qt5.qtquickcontrols2 # for sddm theme ui elements
-    libsForQt5.qt5.qtgraphicaleffects # for sddm theme effects
-    libsForQt5.qtsvg # for sddm theme svg icons
-    libsForQt5.qt5.qtwayland # wayland support for qt5
-
-    polkit_gnome # polkit gui
-  ];
 
   networking = {
     hostName = userConfig.host;
@@ -189,13 +123,13 @@ in
 
   # ===== Program Configurations =====
 
-  programs.dconf.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.dconf.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
   programs.zsh.enable = true;
 
   # ===== System Version =====
-  system.stateVersion = "24.11"; # Don't change this
+  system.stateVersion = "25.05"; # Don't change this
 }
