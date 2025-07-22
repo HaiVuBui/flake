@@ -8,6 +8,9 @@
     # nix lsp
     nixd
 
+    #nvim
+    tree-sitter
+
     # Java/JS
     nodejs
 

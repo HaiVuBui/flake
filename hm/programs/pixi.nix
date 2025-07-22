@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 home.packages = with pkgs; [
-  (pkgs.buildFHSUserEnv {
+  (pkgs.buildFHSEnv {
     name = "pixi";
     runScript = "pixi";
     targetPkgs = pkgs: with pkgs; [

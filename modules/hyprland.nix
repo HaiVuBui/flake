@@ -5,7 +5,7 @@
     xwayland.enable = true;
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 

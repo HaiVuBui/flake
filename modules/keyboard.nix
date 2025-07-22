@@ -2,7 +2,7 @@
 
 {
   services.xserver = {
-  xkbOptions = "caps:backspace";
+  xkb.options = "caps:backspace";
 };
 
 }

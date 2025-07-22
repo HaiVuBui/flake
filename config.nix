@@ -20,13 +20,13 @@
   ];
 
   nixModules = [
-    ./modules/hyprland.nix
     # (toString ./modules/nvidia.nix)
-    # (toString ./modules/pkgs.nix)
-    # (toString ./modules/docker.nix)
+    (toString ./modules/hyprland.nix)
+    (toString ./modules/pkgs.nix)
+    (toString ./modules/docker.nix)
     ./modules/nopass.nix
     (toString ./modules/env.nix)
-    # (toString ./modules/keyboard.nix)
+    (toString ./modules/keyboard.nix)
     (toString ./modules/power.nix)
     # (toString ./modules/vscode.nix)
 
