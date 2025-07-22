@@ -7,7 +7,7 @@
 
   imports = [
     userConfig.hardwareConfig
-    # ./drivers.nix
+    ./drivers.nix
   ] ++ (map (path: import path) userConfig.nixModules);
 
   # ===== Boot Configuration =====

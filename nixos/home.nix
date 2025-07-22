@@ -15,4 +15,8 @@
     ../hm/packages/default.nix
     (import ../hm/programs/default.nix { inherit pkgs userConfig; })
   ];
+
+    services = {
+      blueman-applet.enable = true;
+    };
 }
