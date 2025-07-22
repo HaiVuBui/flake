@@ -13,10 +13,10 @@
   # List of drivers to install in ./nixos/drivers.nix
   drivers = [
     #"amdgpu"
-    "intel"
+    # "intel"
     # "nvidia"
     # "amdcpu"
-    # "intel-old"
+    "intel-old"
   ];
 
   nixModules = [

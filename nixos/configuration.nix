@@ -37,6 +37,19 @@
     powerOnBoot = true;
   };
 
+  environment.pathsToLink = [
+    "/share/icons"
+    "/share/themes"
+    "/share/fonts"
+    "/share/xdg-desktop-portal"
+    "/share/applications"
+    "/share/mime"
+    "/share/wayland-sessions"
+    "/share/zsh"
+    "/share/bash-completion"
+    "/share/fish"
+  ];
+
 
   # # # ===== Security =====
   security = {
