@@ -8,7 +8,7 @@
   locale = "en_CA.UTF-8";
 
   # hardware config - sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
-  hardwareConfig = (toString ./hardware-configuration.nix);
+  hardwareConfig = ./hardware-configuration.nix;
 
   # List of drivers to install in ./nixos/drivers.nix
   drivers = [
@@ -20,25 +20,19 @@
   ];
 
   nixModules = [
-    # (toString ./modules/nvidia.nix)
-    (toString ./modules/hyprland.nix)
-    (toString ./modules/pkgs.nix)
-    (toString ./modules/docker.nix)
-    ./modules/nopass.nix
-    (toString ./modules/env.nix)
-    (toString ./modules/keyboard.nix)
-    (toString ./modules/power.nix)
-    # (toString ./modules/vscode.nix)
+    # ./modules/nvidia.nix
+    ./modules/nixModules/hyprland.nix
+    ./modules/nixModules/pkgs.nix
+    ./modules/nixModules/docker.nix
+    ./modules/nixModules/nopass.nix
+    ./modules/nixModules/env.nix
+    ./modules/nixModules/keyboard.nix
+    ./modules/nixModules/power.nix
+    # ./modules/vscode.nix
 
-    # (toString ./my-module.nix)
-    # in my-module.nix you can reference this userConfig
-    # ({ userConfig, pkgs, ... }: {
-    #   environment.systemPackages = [ pkgs.git ];
-    # })
   ];
 
   homeModules = [
-    # (toString ./my-module.nix)
   ];
 
 }

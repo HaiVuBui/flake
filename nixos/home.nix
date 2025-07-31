@@ -11,25 +11,8 @@
 
   # imports
   imports = [
-    # ./hm/mutable
-    ../hm/packages/default.nix
-    (import ../hm/programs/default.nix { inherit pkgs userConfig; })
-  ];
+     ../modules/packages/default.nix
+     (import ../modules/programs/default.nix { inherit pkgs userConfig; })
+  ] ++ userConfig.homeModules;
 
-    services = {
-      blueman-applet.enable = true;
-    };
-
-    fonts.fontconfig.enable = true;
-
-    xdg.portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
-        libsForQt5.xdg-desktop-portal-kde
-      ];
-      config.common.default = "*";
-      xdgOpenUsePortal = true;
-    };
 }
