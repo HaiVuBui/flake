@@ -15,7 +15,7 @@
   in
   {
     nixpkgs.config.allowUnfree = true   ;
-    nixosConfigurations.MovingCastle = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.MinasTirith = nixpkgs.lib.nixosSystem {
     inherit
       system
       ;

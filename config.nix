@@ -2,7 +2,7 @@
   username = "hai";
   gitUser = "haivubui";
   gitEmail = "buivuhai1105@gmail.com";
-  host = "MovingCastle";
+  host = "MinasTirith";
   defaultPassword = "1105";
   timezone = "Asia/Ho_Chi_Minh";
   locale = "en_CA.UTF-8";
@@ -13,22 +13,23 @@
   # List of drivers to install in ./nixos/drivers.nix
   drivers = [
     #"amdgpu"
-    # "intel"
+    "intel"
     # "nvidia"
     # "amdcpu"
-    "intel-old"
+    # "intel-old"
   ];
 
   nixModules = [
-    # (toString ./modules/nvidia.nix)
+    (toString ./modules/gaming.nix)
+    (toString ./modules/nvidia.nix)
     (toString ./modules/hyprland.nix)
     (toString ./modules/pkgs.nix)
     (toString ./modules/docker.nix)
     ./modules/nopass.nix
     (toString ./modules/env.nix)
     (toString ./modules/keyboard.nix)
-    (toString ./modules/power.nix)
-    # (toString ./modules/vscode.nix)
+    (toString ./modules/server_power.nix)
+    (toString ./modules/vscode.nix)
 
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig

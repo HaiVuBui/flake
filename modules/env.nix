@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Cudas
-    # cudatoolkit
+    cudatoolkit
 
     # nix lsp
     nixd
@@ -37,14 +37,21 @@
     texlab
     texliveFull
   ];
+    xdg.mime.defaultApplications = {
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
+    "x-scheme-handler/unknown" = "firefox.desktop";
+  };
 
   environment.variables = 
   {
     LD_LIBRARY_PATH = pkgs.lib.concatStringsSep ":" [
       "${pkgs.stdenv.cc.cc.lib}/lib"
-      # "${pkgs.cudatoolkit}/lib"
+      "${pkgs.cudatoolkit}/lib"
       "${pkgs.zlib}/lib" 
-      # "/run/opengl-driver/lib"
+      "/run/opengl-driver/lib"
       "$LD_LIBRARY_PATH"
     ];
     XDG_PICTURES_DIR = "$HOME/randomShits/Pictures";

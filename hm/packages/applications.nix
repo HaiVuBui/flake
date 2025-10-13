@@ -19,8 +19,7 @@
     tmux
     code-cursor
     obsidian
-    #jetbrains.pycharm-professional
-    #jetbrains.clion
     sublime4
+    steam-run
   ];
 }

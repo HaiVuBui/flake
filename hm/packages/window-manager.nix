@@ -5,6 +5,7 @@
     # --------------------------------------------------- // Window Manager
     dunst # notification daemon
     rofi-wayland # application launcher
+    tofi # application launcher
     waybar # system bar
     swww # wallpaper
     swaylock # lock screen
