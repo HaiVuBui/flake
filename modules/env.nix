@@ -1,9 +1,10 @@
 { userConfig, pkgs, ... }:
 
 {
+  services.tailscale.enable = true;
   environment.systemPackages = with pkgs; [
     # Cudas
-    # cudatoolkit
+    cudatoolkit
 
     # nix lsp
     nixd
@@ -49,9 +50,9 @@
   {
     LD_LIBRARY_PATH = pkgs.lib.concatStringsSep ":" [
       "${pkgs.stdenv.cc.cc.lib}/lib"
-      # "${pkgs.cudatoolkit}/lib"
+      "${pkgs.cudatoolkit}/lib"
       "${pkgs.zlib}/lib" 
-      # "/run/opengl-driver/lib"
+      "/run/opengl-driver/lib"
       "$LD_LIBRARY_PATH"
     ];
     XDG_PICTURES_DIR = "$HOME/randomShits/Pictures";

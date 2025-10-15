@@ -17,5 +17,6 @@
     swappy # screenshot editor
     cliphist # clipboard manager
     hyprlock # another lock
+    rofi-network-manager # quick UI network manager
   ];
 }
