@@ -15,7 +15,7 @@
   in
   {
     nixpkgs.config.allowUnfree = true   ;
-    nixosConfigurations.MinasTirith = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${userConfig.host} = nixpkgs.lib.nixosSystem {
     inherit
       system
       ;
