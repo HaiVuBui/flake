@@ -22,7 +22,7 @@
   nixModules = [
     (toString ./modules/gaming.nix)
     (toString ./modules/nvidia.nix)
-    (toString ./modules/hyprland.nix)
+    (toString ./modules/wm.nix)
     (toString ./modules/pkgs.nix)
     (toString ./modules/docker.nix)
     ./modules/nopass.nix

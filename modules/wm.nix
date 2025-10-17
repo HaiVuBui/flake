@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
-  programs.hyprland = {
+  programs.niri = {
     enable = true;
-    xwayland.enable = true;
+    # xwayland.enable = true;
   };
 
   programs.dconf.enable = true;
