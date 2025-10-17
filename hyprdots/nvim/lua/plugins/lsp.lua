@@ -1,50 +1,33 @@
 return {
-  -- {
-  --   "williamboman/mason.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require("mason").setup()
-  --   end,
-  -- },
-  -- {
-  --   "williamboman/mason-lspconfig.nvim",
-  --   dependencies = { "williamboman/mason.nvim" },
-  --   config = function()
-  --     require("mason-lspconfig").setup {
-  --       ensure_installed = { "basedpyright", "hls", "texlab", "nixd" },
-  --     }
-  --   end,
-  -- },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp" },
+    dependencies = { "hrsh7th/cmp-nvim-lsp" },
     config = function()
-      local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       vim.o.signcolumn = "yes"
 
-      -- Basedpyright (Python)
-      lspconfig.basedpyright.setup {
+      -- Defaults for all servers
+      vim.lsp.config("*", {
         capabilities = capabilities,
+      })
+
+      -- Basedpyright (Python)
+      vim.lsp.config("basedpyright", {
         settings = {
           basedpyright = {
-            analysis = {
-              typeCheckingMode = "basic",
-            },
+            analysis = { typeCheckingMode = "basic" },
           },
         },
-      }
+      })
 
       -- Haskell Language Server
-      lspconfig.hls.setup {
-        capabilities = capabilities,
+      vim.lsp.config("hls", {
         filetypes = { "haskell", "lhaskell" },
-      }
+      })
 
       -- TexLab (LaTeX)
-      lspconfig.texlab.setup {
-        capabilities = capabilities,
+      vim.lsp.config("texlab", {
         settings = {
           texlab = {
             build = {
@@ -53,12 +36,13 @@ return {
             },
           },
         },
-      }
+      })
 
       -- Nixd
-      lspconfig.nixd.setup {
-        capabilities = capabilities,
-      }
+      vim.lsp.config("nixd", {})
+
+      -- Enable the servers (no Mason)
+      vim.lsp.enable({ "basedpyright", "hls", "texlab", "nixd" })
 
       -- Keybindings
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "go to definition" })
@@ -67,17 +51,20 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
     end,
   },
+
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-nvim-lsp" },
     config = function()
-      require("cmp").setup {
-        sources = {{ name = "nvim_lsp" }},
+      local cmp = require("cmp")
+      cmp.setup {
+        sources = { { name = "nvim_lsp" } },
         mapping = {
-          ["<C-Space>"] = require("cmp").mapping.complete(),
-          ["<CR>"] = require("cmp").mapping.confirm({ select = true }),
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
         },
       }
     end,
   },
 }
+
