@@ -31,12 +31,7 @@
     (toString ./modules/server_power.nix)
     # (toString ./modules/power.nix)
     # (toString ./modules/vscode.nix)
-
-    # (toString ./my-module.nix)
-    # in my-module.nix you can reference this userConfig
-    # ({ userConfig, pkgs, ... }: {
-    #   environment.systemPackages = [ pkgs.git ];
-    # })
+    (toString ./modules/services.nix)
   ];
 
   homeModules = [

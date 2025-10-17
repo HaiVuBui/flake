@@ -15,8 +15,8 @@
   ];
 
   # Enable 32-bit graphics driver support, which is crucial for many games.
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
-  };
+  # hardware.graphics = {
+  #   enable = true;
+  #   driSupport32Bit = true;
+  # };
 }

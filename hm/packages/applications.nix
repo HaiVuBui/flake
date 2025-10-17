@@ -17,7 +17,7 @@
     tty-clock
     cmatrix
     tmux
-    code-cursor
+    # code-cursor
     obsidian
     sublime4
     steam-run
