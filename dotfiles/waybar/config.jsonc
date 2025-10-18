@@ -8,9 +8,9 @@
     "height": 0,
     "modules-left": [
         "clock",
-        "hyprland/workspaces"
+        "niri/workspaces"
     ],
-    "modules-center": ["hyprland/window"],
+    "modules-center": ["niri/window"],
     "modules-right": [
         "tray",
         "memory",
