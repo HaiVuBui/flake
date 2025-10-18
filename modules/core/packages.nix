@@ -34,6 +34,8 @@
     pavucontrol # audio controller
     pamixer # audi controller
     brightnessctl # light controller
+    libnotify # For Notifications
+    mako # notifications daemon
   ];
 }
 
