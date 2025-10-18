@@ -36,6 +36,7 @@
     brightnessctl # light controller
     libnotify # For Notifications
     mako # notifications daemon
+    playerctl # media controller
   ];
 }
 

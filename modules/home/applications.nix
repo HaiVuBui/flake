@@ -18,6 +18,7 @@
     git # distributed version control system
     fzf # command line fuzzy finder
     yazi # cli files manager
+    htop # monitors tool
 
     # UI tools
     waybar
