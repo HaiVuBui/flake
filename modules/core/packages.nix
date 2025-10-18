@@ -28,9 +28,11 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    #essentials
-    cliphist #clipboard history
-    wl-clipboard #clipboard 
+    # essentials
+    cliphist # clipboard history
+    wl-clipboard # clipboard 
+    pavucontrol # audio controller
+    pamixer #audi controller
   ];
 }
 
