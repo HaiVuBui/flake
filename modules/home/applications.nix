@@ -27,6 +27,7 @@
     wlogout
     udiskie
     xwayland-satellite
+    nautilus
   ];
 }
 
