@@ -12,7 +12,7 @@ in
     ./boot.nix
     ./flatpak.nix
     ./fonts.nix
-    # ./hardware.nix
+    ./hardware.nix
     ./network.nix
     # ./nfs.nix
     # ./nh.nix
