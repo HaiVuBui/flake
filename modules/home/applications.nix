@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     # web browsers
     firefox
+    brave
 
     #terminals
     kitty

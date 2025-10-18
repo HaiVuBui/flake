@@ -24,14 +24,14 @@ in
     ./security.nix
     ./services.nix
     # ./steam.nix
-    # ./stylix.nix
+    ./stylix.nix
     # ./syncthing.nix
     ./system.nix
     # ./thunar.nix
     ./user.nix
     # ./virtualisation.nix
     # ./xserver.nix
-    # inputs.stylix.nixosModules.stylix
+    inputs.stylix.nixosModules.stylix
     ./nopass.nix
     ./docker.nix
   ];

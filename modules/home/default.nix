@@ -18,5 +18,9 @@
     ./git.nix
     ./pixi.nix
     ./applications.nix
+    ./stylix.nix
+    ./qt.nix
+    ./gtk.nix
+    ./stylix.nix
   ];
 }
