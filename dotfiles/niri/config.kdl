@@ -366,6 +366,9 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+P { spawn-sh "/home/hai/.nix-profile/bin/caelestia shell drawers toggle launcher";}
+
+
     Mod+Backspace hotkey-overlay-title="Exit menu" { spawn "wlogout"; }
 
     // applications launcher

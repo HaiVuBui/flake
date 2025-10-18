@@ -13,6 +13,9 @@
     niri = {
       enable = true; # set this so desktop file is created
     };
+    hyprland = {
+      enable = true; # set this so desktop file is created
+    };
     dconf.enable = true;
     # seahorse.enable = true;
     # fuse.userAllowOther = true;
