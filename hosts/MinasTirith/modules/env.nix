@@ -55,5 +55,6 @@
       "$LD_LIBRARY_PATH"
     ];
     XDG_PICTURES_DIR = "$HOME/randomShits/Pictures";
+    MOZ_ENABLE_WAYLAND = "1";
   };
 }
