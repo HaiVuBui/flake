@@ -6,14 +6,10 @@
     profiles = {
       default = {
         extensions = with pkgs.vscode-extensions; [
-          bbenoist.nix
-          jeff-hykin.better-nix-syntax
-          ms-vscode.cpptools-extension-pack
-          vscodevim.vim # Vim emulation
-          mads-hartmann.bash-ide-vscode
-          tamasfe.even-better-toml
-          zainchen.json
-          shd101wyy.markdown-preview-enhanced
+          asvetliakov.vscode-neovim
+          ms-python.python
+          catppuccin.catppuccin-vsc
+          ms-toolsai.jupyter
         ];
       };
     };

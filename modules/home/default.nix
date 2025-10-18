@@ -16,7 +16,7 @@
     ./zsh.nix
     ./vscode.nix
     ./git.nix
-    # ./niri.nix
+    ./pixi.nix
     ./applications.nix
   ];
 }
