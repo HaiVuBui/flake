@@ -32,7 +32,8 @@
     cliphist # clipboard history
     wl-clipboard # clipboard 
     pavucontrol # audio controller
-    pamixer #audi controller
+    pamixer # audi controller
+    brightnessctl # light controller
   ];
 }
 
