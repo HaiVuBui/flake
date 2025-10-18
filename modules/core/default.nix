@@ -33,5 +33,6 @@ in
     # ./xserver.nix
     # inputs.stylix.nixosModules.stylix
     ./nopass.nix
+    ./docker.nix
   ];
 }

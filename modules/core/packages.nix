@@ -36,11 +36,11 @@
     kitty
 
     #essentials
-    cliphist
-    wl-clipboard
+    cliphist #clipboard history
+    wl-clipboard #clipboard 
 
     #shell
-    tmux 
+    tmux #window multiplier
     eza # file lister for zsh
     oh-my-zsh # plugin manager for zsh
     zsh-powerlevel10k # theme for zsh
@@ -48,7 +48,7 @@
     fastfetch # system information fetch tool
     git # distributed version control system
     fzf # command line fuzzy finder
-    # comma # package runner
+    yazi # cli files manager
 
     # UI tools
     waybar

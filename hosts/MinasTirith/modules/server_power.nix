@@ -1,4 +1,4 @@
-{ userConfig, pkgs, ... }:
+{pkgs, ... }:
 
 {
   # Enable TLP

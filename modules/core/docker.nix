@@ -1,4 +1,4 @@
-{pkgs, userConfig, ...}:
+{pkgs, ...}:
 {
   virtualisation.docker = {
     enable = true;
