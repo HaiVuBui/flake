@@ -367,18 +367,19 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+P { spawn-sh "/home/hai/.nix-profile/bin/caelestia shell drawers toggle launcher";}
+    // Mod+Shift+b { spawn "brave";}
 
 
     Mod+Backspace hotkey-overlay-title="Exit menu" { spawn "wlogout"; }
 
     // applications launcher
-    Mod+A hotkey-overlay-title="Applications launcher" { spawn "rofi" "-show" "drun"; }
+    Mod+A hotkey-overlay-title="Applications launcher" { spawn-sh "rofi -no-config -show drun"; }
 
     // clipboard history
     Mod+B hotkey-overlay-title="Clipboard" {spawn "sh" "-c" "cliphist list | rofi -dmenu -i -p 'clip:' | cliphist decode | wl-copy";}
 
     // wallpaper picker
-    Mod+Shift+w {spawn "sh" "-c" "/home/hai/.config/scripts/wallpaper-picker.sh";}
+    Mod+Shift+w {spawn-sh "bash /home/hai/.config/scripts/wppicker.sh";}
 
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
