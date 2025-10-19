@@ -30,7 +30,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
-    host = "MinasTirith";
+    host = "MovingCastle";
     profile = "default";
       username = "hai";
 
@@ -52,6 +52,7 @@
     {
       nixosConfigurations = {
         nvidia = mkNixosConfig "nvidia";
+        intel = mkNixosConfig "intel";
       };
     };
 }
