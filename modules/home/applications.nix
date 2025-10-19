@@ -29,7 +29,7 @@
     wlogout
     udiskie
     xwayland-satellite
-    nautilus
+    kdePackages.dolphin
   ];
 }
 
