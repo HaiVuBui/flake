@@ -30,7 +30,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
-    host = "MovingCastle";
+    host = "MinasTirith";
     profile = "default";
       username = "hai";
 
