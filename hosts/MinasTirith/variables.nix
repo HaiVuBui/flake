@@ -7,7 +7,7 @@
   # # `tui` for Text login
   # # `sddm` for graphical GUI (default)
   # # SDDM background is set with stylixImage
-  # displayManager = "sddm";
+  displayManager = "tui";
   #
   # # Emable/disable bundled applications
   # tmuxEnable = false;
@@ -64,16 +64,17 @@
   # # Yazi is default File Manager
   thunarEnable = true;
   #
-  # # Themes, waybar and animation.
-  # #  Only uncomment your selection
-  # # The others much be commented out.
-  #
-  # # Set Stylix Image
-  # # This will set your color palette
-  # # Default background
-  # # Add new images to ~/zaneyos/wallpapers
+  # Themes, waybar and animation.
+  #  Only uncomment your selection
+  # The others much be commented out.
+
+  # Set Stylix Image
+  # This will set your color palette
+  # Default background
+  # Add new images to ~/zaneyos/wallpapers
   # stylixImage = ../../wallpapers/frieren.jpg;
   stylixImage = ../../wallpapers/118205969_p0.jpg;
+  # stylixImage = ../../wallpapers/satellites.png;
   # #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
   # #stylixImage = ../../wallpapers/Anime-Purple-eyes.png;
   # #stylixImage = ../../wallpapers/Rainnight.jpg;

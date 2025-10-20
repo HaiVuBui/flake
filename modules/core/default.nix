@@ -20,7 +20,7 @@ in
     ./packages.nix
     # ./printing.nix
     # Conditionally import the display manager module
-    # (if vars.displayManager == "tui" then ./greetd.nix else ./sddm.nix)
+    (if vars.displayManager == "tui" then ./greetd.nix else ./sddm.nix)
     ./security.nix
     ./services.nix
     # ./steam.nix
