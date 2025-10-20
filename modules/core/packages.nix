@@ -17,7 +17,7 @@
       enable = true; # set this so desktop file is created
     };
     dconf.enable = true;
-    # seahorse.enable = true;
+    seahorse.enable = true;
     # fuse.userAllowOther = true;
     # mtr.enable = true;
     # adb.enable = true;
@@ -40,6 +40,7 @@
     libnotify # For Notifications
     mako # notifications daemon
     playerctl # media controller
+    vim # editor
   ];
 }
 

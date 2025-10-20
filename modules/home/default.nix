@@ -22,5 +22,6 @@
     ./qt.nix
     ./gtk.nix
     ./stylix.nix
+    ./brave.nix
   ];
 }

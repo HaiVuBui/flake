@@ -56,5 +56,7 @@
     ];
     XDG_PICTURES_DIR = "$HOME/randomShits/Pictures";
     MOZ_ENABLE_WAYLAND = "1";
+    NIXOS_OZONE_WL = "1";
+    OZONE_PLATFORM = "wayland";
   };
 }

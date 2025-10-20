@@ -2,11 +2,13 @@
   home.packages = with pkgs; [
     # web browsers
     firefox
-    brave
+    # brave
 
     #terminals
     kitty
 
+    # editors
+    sublime
 
     #shell
     tmux #window multiplier
@@ -29,7 +31,15 @@
     wlogout
     udiskie
     xwayland-satellite
-    kdePackages.dolphin
+    # kdePackages.dolphin
+    # thurnar
+
+    #cli tools
+    zip
+    unzip
+
+    # apps
+    obsidian
   ];
 }
 
