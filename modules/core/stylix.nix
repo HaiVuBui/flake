@@ -9,25 +9,26 @@ in
   # Styling Options
   stylix = {
     enable = true;
-    image = stylixImage;
-    # base16Scheme = {
-    #   base00 = "282936";
-    #   base01 = "3a3c4e";
-    #   base02 = "4d4f68";
-    #   base03 = "626483";
-    #   base04 = "62d6e8";
-    #   base05 = "e9e9f4";
-    #   base06 = "f1f2f8";
-    #   base07 = "f7f7fb";
-    #   base08 = "ea51b2";
-    #   base09 = "b45bcf";
-    #   base0A = "00f769";
-    #   base0B = "ebff87";
-    #   base0C = "a1efe4";
-    #   base0D = "62d6e8";
-    #   base0E = "b45bcf";
-    #   base0F = "00f769";
-    # };
+    # image = stylixImage;
+    base16Scheme = {
+    base00 = "fbf1c7"; # background (light0)
+    base01 = "f2e5bc"; # lighter background (light0_soft)
+    base02 = "ebdbb2"; # selection bg / comments
+    base03 = "d5c4a1"; # subtle text
+    base04 = "bdae93"; # muted text
+    base05 = "504945"; # main text / fg (inverted dark)
+    base06 = "3c3836"; # strong text
+    base07 = "282828"; # very dark (used for fg in light themes)
+    base08 = "9d0006"; # red
+    base09 = "af3a03"; # orange
+    base0A = "b57614"; # yellow
+    base0B = "79740e"; # green
+    base0C = "427b58"; # aqua / cyan
+    base0D = "076678"; # blue
+    base0E = "8f3f71"; # purple
+    base0F = "d65d0e"; # brown / extra accent
+  };
+
     polarity = "light";
     opacity.terminal = 1.0;
     cursor = {

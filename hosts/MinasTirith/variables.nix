@@ -73,14 +73,10 @@
   # Default background
   # Add new images to ~/zaneyos/wallpapers
   # stylixImage = ../../wallpapers/frieren.jpg;
-  stylixImage = ../../wallpapers/118205969_p0.jpg;
+  stylixImage = ../../wallpapers/37.jpg;
+  # stylixImage = ../../wallpapers/118205969_p0.jpg;
   # stylixImage = ../../wallpapers/satellites.png;
-  # #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
-  # #stylixImage = ../../wallpapers/Anime-Purple-eyes.png;
-  # #stylixImage = ../../wallpapers/Rainnight.jpg;
-  # #stylixImage = ../../wallpapers/zaney-wallpaper.jpg;
-  # #stylixImage = ../../wallpapers/nix-wallpaper-stripes-logo.png;
-  # #stylixImage = ../../wallpapers/beautifulmountainscape.jpg;
+
   #
   # # Set Waybar
   # #  Available Options:

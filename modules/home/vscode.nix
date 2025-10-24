@@ -10,6 +10,7 @@
           ms-python.python
           catppuccin.catppuccin-vsc
           ms-toolsai.jupyter
+          # sainnhe.gruvbox-material-vscode
         ];
       };
     };
