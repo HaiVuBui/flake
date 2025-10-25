@@ -73,6 +73,8 @@
   # Default background
   # Add new images to ~/zaneyos/wallpapers
   # stylixImage = ../../wallpapers/frieren.jpg;
+  # stylixImage = ../../wallpapers/Random/fireplace.gif;
+  stylixImage = ../../wallpapers/Random/white_woman.png;
   # stylixImage = ../../wallpapers/118205969_p0.jpg;
   # stylixImage = ../../wallpapers/37.jpg;
   # stylixImage = ../../wallpapers/satellites.png;

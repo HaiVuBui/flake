@@ -1,3 +1,6 @@
 [submodule "wallpapers/walls"]
 	path = wallpapers/walls
 	url = https://github.com/dharmx/walls.git
+[submodule "wallpapers/wallpapers/walls"]
+	path = wallpapers/wallpapers/walls
+	url = https://github.com/dharmx/walls.git

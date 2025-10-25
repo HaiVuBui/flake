@@ -24,7 +24,7 @@
       alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
       alias ld='eza -lhD --icons=auto' # long list dirs
       alias lt='eza --icons=auto --tree' # list folder as tree
-      alias vc='code' # gui code editor
+      alias yz='yazi' # clear terminal
 
       # Directory navigation shortcuts
       alias ..='cd ..'
@@ -41,9 +41,6 @@
 
       export PATH=$HOME/.local/bin:$PATH
 
-      alias poe='poetry'
-      alias por='poetry run'
-      alias sub='sublime'
       alias n='nvim'
 
     '';
